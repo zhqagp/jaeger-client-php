@@ -1,5 +1,5 @@
 {
-    "name": "jonahgeorge/jaeger-client-php",
+    "name": "zhqagp/jaeger-client-php",
     "description": "Jaeger Bindings for PHP OpenTracing API",
     "keywords": [
         "jaeger",
@@ -19,7 +19,7 @@
         },
         {
             "name": "Contributors",
-            "homepage": "https://github.com/jonahgeorge/jaeger-client-php/graphs/contributors"
+            "homepage": "https://github.com/zhqagp/jaeger-client-php/graphs/contributors"
         }
     ],
     "require": {
