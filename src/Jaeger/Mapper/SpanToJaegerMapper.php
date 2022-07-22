@@ -101,11 +101,20 @@ class SpanToJaegerMapper
             $fields = [];
 
             if (!empty($spanLog["fields"])) {
-                $fields[] = new Tag([
-                    "key" => "event",
-                    "vType" => TagType::STRING,
-                    "vStr" => json_encode($spanLog["fields"])
-                ]);
+//                $fields[] = new Tag([
+//                    "key" => "event",
+//                    "vType" => TagType::STRING,
+//                    "vStr" => json_encode($spanLog["fields"])
+//                ]);
+
+                foreach ($spanLog["fields"] as $kf=>$vf){
+                    $fields[] = new Tag([
+                        "key" => $kf,
+                        "vType" => TagType::STRING,
+                        "vStr" => is_string($vf)?$vf:json_encode($vf)
+                    ]);
+                }
+
             }
 
             $logs[] = new Log([
